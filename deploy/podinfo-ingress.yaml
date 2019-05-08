@@ -3,6 +3,7 @@
   metadata:
     annotations:
       kubernetes.io/ingress.class: traefik
+      traefik.frontend.rule.type: PathPrefixStrip
     creationTimestamp: null
     name: podinfo
     namespace: dev

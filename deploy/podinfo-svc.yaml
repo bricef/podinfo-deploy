@@ -10,6 +10,7 @@ spec:
     - port: 9898
       targetPort: 9898
       protocol: TCP
+      name: http
   selector:
     app: podinfo
 
