@@ -12,10 +12,30 @@ spec:
     metadata:
       labels:
         app: podinfo
+      annotations:
+        prometheus.io/scrape: 'true'
     spec:
       containers:
       - name: podinfod
         image: quay.io/stefanprodan/podinfo:0.3.0
         ports:
         - containerPort: 9898
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 9898
+          initialDelaySeconds: 1
+          periodSeconds: 5
+          failureThreshold: 1
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 9898
+          initialDelaySeconds: 1
+          periodSeconds: 10
+          failureThreshold: 2
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "10m"
 
