@@ -4,6 +4,8 @@ apiVersion: apps/v1
 metadata:
   name: podinfo
   namespace: dev
+  annotations:
+    flux.weave.works/automated: 'true'
 spec:
   replicas: 4
   selector:
@@ -20,8 +22,8 @@ spec:
       - name: podinfod
         image: quay.io/stefanprodan/podinfo:1.3.0
         command:
-            - ./podinfo
-            - --port=9898
+        - ./podinfo
+        - --port=9898
         ports:
         - containerPort: 9898
         readinessProbe:
