@@ -1,0 +1,21 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: podinfo
+  namespace: yaml-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+     app: podinfo
+  template:
+    metadata:
+      labels:
+        app: podinfo
+    spec:
+      containers:
+      - name: podinfod
+        image: quay.io/stefanprodan/podinfo:0.3.0
+        ports:
+        - containerPort: 9898
+
