@@ -6,6 +6,7 @@ metadata:
   namespace: dev
   annotations:
     flux.weave.works/tag.podinfod: glob:*
+    flux.weave.works/automated: 'true'
 spec:
   replicas: 4
   selector:
