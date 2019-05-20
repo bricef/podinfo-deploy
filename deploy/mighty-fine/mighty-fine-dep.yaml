@@ -7,12 +7,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: mighty-fine
+      app: mighty-fine
   replicas: 1
   template:
     metadata:
       labels:
-        name: mighty-fine
+        app: mighty-fine
     spec:
       containers:
       - name: mighty-fine
