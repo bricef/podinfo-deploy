@@ -5,8 +5,14 @@ metadata:
   name: mighty-fine
   namespace: dev
 spec:
+  selector:
+    matchLabels:
+      name: mighty-fine
   replicas: 1
   template:
+    metadata:
+      labels:
+        name: mighty-fine
     spec:
       containers:
       - name: mighty-fine
