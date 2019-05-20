@@ -14,6 +14,6 @@ spec:
           serviceName: mighty-fine
           servicePort: 3000
         path: /mighty-fine
-  host: training-user-58.training.weave.works
+    host: training-user-58.training.weave.works
 status:
   loadBalancer: {}
