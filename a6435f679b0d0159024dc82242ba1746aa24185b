@@ -1,0 +1,1 @@
+{"jobID":"38128c86-5a25-b66d-8108-5f419e9867e7","spec":{"type":"policy","cause":{"Message":"","User":"Ilya Dmitrichenko \u003cilya@weave.works\u003e"},"spec":{"dev:deployment/podinfo":{"add":null,"remove":{"automated":"true"}}}},"result":null}
