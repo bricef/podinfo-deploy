@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: traefik
+    trigger: 'true'
   name: mighty-fine
   namespace: dev
 spec:
