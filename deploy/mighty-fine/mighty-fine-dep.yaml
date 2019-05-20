@@ -1,0 +1,20 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mighty-fine
+  namespace: dev
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: mighty-fine
+        image: quay.io/brice/metrics-demo:v4-subscription-service
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "10m"
+
