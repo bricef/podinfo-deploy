@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: podinfod
-        image: quay.io/stefanprodan/podinfo:3.0.2
+        image: quay.io/stefanprodan/podinfo:3.0.4
         command:
         - ./podinfo
         - --port=9898
