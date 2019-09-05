@@ -16,5 +16,9 @@ spec:
           servicePort: 9898
           port: http
         path: /podinfo
+  tls:
+  - hosts:
+    - training-user-2.training.weave.works
+    secretName: ingress-certificate
 status:
   loadBalancer: {}
