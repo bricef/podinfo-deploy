@@ -9,7 +9,8 @@ metadata:
   namespace: dev
 spec:
   rules:
-  - http:
+  - host: training-user-2.training.weave.works
+    http:
       paths:
       - backend:
           serviceName: podinfo
