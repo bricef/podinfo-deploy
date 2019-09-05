@@ -13,7 +13,7 @@ spec:
   tls: 
   - hosts:
     - training-user-1.training.weave.works
-    secretName: letsencrypt-prod
+    secretName: ingress-certificate
   rules:
   - host: training-user-1.training.weave.works
     http:
