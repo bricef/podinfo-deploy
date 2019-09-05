@@ -1,0 +1,1 @@
+{"jobID":"8b6b20b8-f102-d0fd-8ab6-311a2c290ed9","spec":{"type":"policy","cause":{"Message":"Demo","User":"Brice Fernandes \u003cbrice@weave.works\u003e"},"spec":{"dev:deployment/podinfo":{"add":null,"remove":{"locked":"true","locked_msg":"\"Demo\"","locked_user":"Brice Fernandes \u003cbrice@weave.works\u003e"}}}},"result":null}
