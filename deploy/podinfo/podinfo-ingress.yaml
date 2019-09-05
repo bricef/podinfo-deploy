@@ -24,7 +24,7 @@ spec:
         path: /podinfo
   tls:
   - hosts:
-    - training-user-2.training.weave.works
+    - training-user-1.training.weave.works
     secretName: ingress-certificate
 status:
   loadBalancer: {}
