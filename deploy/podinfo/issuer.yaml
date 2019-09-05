@@ -2,7 +2,7 @@ apiVersion: certmanager.k8s.io/v1alpha1
 kind: Issuer
 metadata:
   name: letsencrypt-prod
-  namespace: ide
+  namespace: dev
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
