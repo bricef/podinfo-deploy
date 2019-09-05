@@ -6,6 +6,7 @@ metadata:
     traefik.frontend.rule.type: PathPrefixStrip
     certmanager.k8s.io/acme-challenge-type: http01
     certmanager.k8s.io/issuer: letsencrypt-prod
+    fluxcd.io/trigger-force: 1
   name: podinfo
   namespace: dev
 spec:
