@@ -20,7 +20,6 @@ spec:
       - backend:
           serviceName: podinfo
           servicePort: 9898
-          port: http
         path: /podinfo
   tls:
   - hosts:
