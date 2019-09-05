@@ -1,0 +1,34 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: metrics-demo
+  namespace: dev
+  annotations:
+    flux.weave.works/tag.metrics-demod: glob:*
+    flux.weave.works/automated: 'true'
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: metrics-demo
+  template:
+    metadata:
+      labels:
+        app: metrics-demo
+      annotations:
+        prometheus.io/scrape: 'true'
+    spec:
+      containers:
+      - name: metrics-demod
+        image: quay.io/brice/metrics-demo:v4-subscription-service
+        command:
+        - ./metrics-demo
+        - --port=9898
+        ports:
+        - containerPort: 3000
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "10m"
+
