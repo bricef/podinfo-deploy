@@ -6,9 +6,6 @@ metadata:
   namespace: dev
   annotations:
     flux.weave.works/tag.podinfod: glob:*
-    flux.weave.works/locked: 'true'
-    flux.weave.works/locked_msg: '"Performing risky op"'
-    flux.weave.works/locked_user: Ilya Dmitrichenko <ilya@weave.works>
 spec:
   replicas: 4
   selector:
