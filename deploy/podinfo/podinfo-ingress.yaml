@@ -1,26 +1,23 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
+  name: podinfo
+  namespace: dev
   annotations:
     kubernetes.io/ingress.class: traefik
     traefik.frontend.rule.type: PathPrefixStrip
     certmanager.k8s.io/acme-challenge-type: http01
     certmanager.k8s.io/issuer: letsencrypt-prod
-    fluxcd.io/trigger-force: 1
-  name: podinfo
-  namespace: dev
 spec:
-  tls: 
-  - hosts:
-    - training-user-1.training.weave.works
-    secretName: ingress-certificate
+  tls:
+    - secretName: ingress-certificate
+      hosts:
+      - training-user-1.training.weave.works
   rules:
   - host: training-user-1.training.weave.works
     http:
       paths:
-      - backend:
+      - path: /podinfo
+        backend:
           serviceName: podinfo
           servicePort: 9898
-        path: /podinfo
-status:
-  loadBalancer: {}
