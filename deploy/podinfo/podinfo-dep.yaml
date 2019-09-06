@@ -6,7 +6,6 @@ metadata:
   namespace: dev
   annotations:
     flux.weave.works/tag.podinfod: glob:*
-    flux.weave.works/automated: 'true'
 spec:
   replicas: 4
   selector:
@@ -21,7 +20,7 @@ spec:
     spec:
       containers:
       - name: podinfod
-        image: quay.io/stefanprodan/podinfo:3.0.0
+        image: quay.io/stefanprodan/podinfo:2.0.0
         command:
         - ./podinfo
         - --port=9898
