@@ -1,0 +1,1 @@
+{"jobID":"47c60664-089e-e062-73c0-259fb9ceb0ef","spec":{"type":"policy","cause":{"Message":"","User":"Brice Fernandes \u003cbrice@weave.works\u003e"},"spec":{"dev:deployment/podinfo":{"add":{"tag.podinfod":"semver:\u003e3.0.0"},"remove":null}}},"result":null}
